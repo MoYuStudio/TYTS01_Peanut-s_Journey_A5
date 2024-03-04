@@ -1,0 +1,26 @@
+"UserRoamingConfigStore"
+{
+	"Software"
+	{
+		"Valve"
+		{
+			"steam"
+			{
+				"SurveyDate"		"2019-01-27"
+				"SurveyDateVersion"		"-5941430482145594456"
+				"StartMenuShortcutCheck"		"0"
+				"DesktopShortcutCheck"		"0"
+				"apps"
+				{
+					"2075970"
+					{
+						"tags"
+						{
+							"0"		"favorite"
+						}
+					}
+				}
+			}
+		}
+	}
+}

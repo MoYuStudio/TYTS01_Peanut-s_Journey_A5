@@ -1,0 +1,94 @@
+
+
+[2022-08-30 17:14:24] Failed to get ParentalSettings\Settings from config file for account ID 354426349
+[2022-08-30 17:14:32] Got parental settings for account ID 354426349
+
+
+[2022-08-30 17:18:55] Validating parental settings
+[2022-08-30 17:18:55] Settings dump:
+[2022-08-30 17:18:55] 	Account ID: 354426349
+[2022-08-30 17:18:55] 	Enabled: false
+[2022-08-30 17:18:55] 	Base list: 0 ()
+[2022-08-30 17:18:55] 	No custom list
+[2022-08-30 17:18:55] 	No enabled features
+
+
+[2022-08-30 17:21:21] Validating parental settings
+[2022-08-30 17:21:21] Settings dump:
+[2022-08-30 17:21:21] 	Account ID: 354426349
+[2022-08-30 17:21:21] 	Enabled: false
+[2022-08-30 17:21:21] 	Base list: 0 ()
+[2022-08-30 17:21:21] 	No custom list
+[2022-08-30 17:21:21] 	No enabled features
+
+
+[2022-08-30 17:29:48] Validating parental settings
+[2022-08-30 17:29:48] Settings dump:
+[2022-08-30 17:29:48] 	Account ID: 354426349
+[2022-08-30 17:29:48] 	Enabled: false
+[2022-08-30 17:29:48] 	Base list: 0 ()
+[2022-08-30 17:29:48] 	No custom list
+[2022-08-30 17:29:48] 	No enabled features
+
+
+[2022-08-30 17:32:05] Validating parental settings
+[2022-08-30 17:32:05] Settings dump:
+[2022-08-30 17:32:05] 	Account ID: 354426349
+[2022-08-30 17:32:05] 	Enabled: false
+[2022-08-30 17:32:05] 	Base list: 0 ()
+[2022-08-30 17:32:05] 	No custom list
+[2022-08-30 17:32:05] 	No enabled features
+
+
+[2022-08-30 17:34:04] Validating parental settings
+[2022-08-30 17:34:04] Settings dump:
+[2022-08-30 17:34:04] 	Account ID: 354426349
+[2022-08-30 17:34:04] 	Enabled: false
+[2022-08-30 17:34:04] 	Base list: 0 ()
+[2022-08-30 17:34:04] 	No custom list
+[2022-08-30 17:34:04] 	No enabled features
+
+
+[2022-08-30 17:36:15] Validating parental settings
+[2022-08-30 17:36:15] Settings dump:
+[2022-08-30 17:36:15] 	Account ID: 354426349
+[2022-08-30 17:36:15] 	Enabled: false
+[2022-08-30 17:36:15] 	Base list: 0 ()
+[2022-08-30 17:36:15] 	No custom list
+[2022-08-30 17:36:15] 	No enabled features
+
+
+[2022-08-30 17:37:44] Validating parental settings
+[2022-08-30 17:37:44] Settings dump:
+[2022-08-30 17:37:44] 	Account ID: 354426349
+[2022-08-30 17:37:44] 	Enabled: false
+[2022-08-30 17:37:44] 	Base list: 0 ()
+[2022-08-30 17:37:44] 	No custom list
+[2022-08-30 17:37:44] 	No enabled features
+
+
+[2022-08-30 17:40:44] Validating parental settings
+[2022-08-30 17:40:44] Settings dump:
+[2022-08-30 17:40:44] 	Account ID: 354426349
+[2022-08-30 17:40:44] 	Enabled: false
+[2022-08-30 17:40:44] 	Base list: 0 ()
+[2022-08-30 17:40:44] 	No custom list
+[2022-08-30 17:40:44] 	No enabled features
+
+
+[2022-08-30 17:41:01] Validating parental settings
+[2022-08-30 17:41:01] Settings dump:
+[2022-08-30 17:41:01] 	Account ID: 354426349
+[2022-08-30 17:41:01] 	Enabled: false
+[2022-08-30 17:41:01] 	Base list: 0 ()
+[2022-08-30 17:41:01] 	No custom list
+[2022-08-30 17:41:01] 	No enabled features
+
+
+[2022-08-30 17:45:38] Validating parental settings
+[2022-08-30 17:45:38] Settings dump:
+[2022-08-30 17:45:38] 	Account ID: 354426349
+[2022-08-30 17:45:38] 	Enabled: false
+[2022-08-30 17:45:38] 	Base list: 0 ()
+[2022-08-30 17:45:38] 	No custom list
+[2022-08-30 17:45:38] 	No enabled features

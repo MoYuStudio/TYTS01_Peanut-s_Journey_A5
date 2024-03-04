@@ -1,0 +1,9 @@
+
+# window
+window_title: TinyLand
+window_icon: assets/icon/icon.png
+
+window_size:
+  - 800
+  - 400
+window_fps: 60

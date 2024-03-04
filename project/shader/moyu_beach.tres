@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bjuw2iyvpg441"]
+
+[ext_resource type="Texture2D" uid="uid://bv62uc0h0kspc" path="res://resource/tile/sand.png" id="1_k0ffa"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_k0ffa")
+normal_enabled = true
+normal_texture = ExtResource("1_k0ffa")
+texture_filter = 0

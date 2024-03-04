@@ -1,0 +1,8 @@
+
+# path
+
+block_data: data/block/data.yml
+
+assets_original: assets/block/
+mask_original: assets/block/254.png
+perchoose_original: assets/block/255.png

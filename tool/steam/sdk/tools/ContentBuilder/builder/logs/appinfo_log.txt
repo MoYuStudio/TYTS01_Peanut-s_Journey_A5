@@ -1,0 +1,105 @@
+
+
+[2022-08-30 17:14:24] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:14:32] Change number 0->15885177, apps: 0/0, packages: 0/0
+[2022-08-30 17:14:32] Requesting 1 apps, 270 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:14:39] Downloaded 1 apps via HTTP, 13 KB (3 KB compressed)
+[2022-08-30 17:14:39] Requesting 0 apps, 270 packages (full data, 1024 prev attempts)
+[2022-08-30 17:14:44] UpdatesJob: finished OK, apps updated 1 (13 KB), packages updated 270 (70 KB)
+[2022-08-30 17:14:44] Requesting 739 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:14:49] Requested 129 app access tokens, 104 received, 25 denied
+[2022-08-30 17:14:50] Updated SHAs with 104 new access tokens
+[2022-08-30 17:14:58] Downloaded 135 apps via HTTP, 6454 KB (1577 KB compressed)
+[2022-08-30 17:14:58] Requesting 604 apps, 0 packages (full data, 1024 prev attempts)
+[2022-08-30 17:14:59] Starting async write C:\Users\Server\Downloads\steamworks_sdk_155\sdk\tools\ContentBuilder\builder/appcache/appinfo.vdf (4983271 bytes)
+[2022-08-30 17:15:26] UpdatesJob: finished OK, apps updated 739 (7793 KB), packages updated 0 (0 KB)
+[2022-08-30 17:15:41] Starting async write C:\Users\Server\Downloads\steamworks_sdk_155\sdk\tools\ContentBuilder\builder/appcache/appinfo.vdf (5950109 bytes)
+
+
+[2022-08-30 17:18:55] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:18:56] Packages changed: 
+[2022-08-30 17:18:56] Apps changed: 964570=15885200,
+[2022-08-30 17:18:56] Change number 15885177->15885219, apps: 1/31, packages: 0/4
+[2022-08-30 17:18:56] Requesting 27 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:18:56] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:18:57] Downloaded 1 apps via HTTP, 15 KB (4 KB compressed)
+[2022-08-30 17:18:57] UpdatesJob: finished OK, apps updated 1 (15 KB), packages updated 0 (0 KB)
+[2022-08-30 17:18:58] Starting async write C:\Users\Server\Downloads\steamworks_sdk_155\sdk\tools\ContentBuilder\builder/appcache/appinfo.vdf (5950109 bytes)
+
+
+[2022-08-30 17:21:21] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:21:21] Apps changed: 
+[2022-08-30 17:21:21] Change number 15885219->15885232, apps: 0/13, packages: 0/0
+[2022-08-30 17:21:21] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:21:22] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:21:22] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2022-08-30 17:29:48] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:29:48] Apps changed: 
+[2022-08-30 17:29:48] Change number 15885232->15885276, apps: 0/41, packages: 0/0
+[2022-08-30 17:29:48] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:29:49] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:29:49] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2022-08-30 17:32:06] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:32:07] Packages changed: 
+[2022-08-30 17:32:07] Apps changed: 
+[2022-08-30 17:32:07] Change number 15885276->15885297, apps: 0/17, packages: 0/4
+[2022-08-30 17:32:07] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:32:08] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:32:08] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2022-08-30 17:34:04] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:34:18] Apps changed: 
+[2022-08-30 17:34:18] Change number 15885297->15885314, apps: 0/16, packages: 0/0
+[2022-08-30 17:34:18] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:34:20] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:34:20] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2022-08-30 17:36:15] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:36:15] Apps changed: 1493710=15885324,
+[2022-08-30 17:36:15] Change number 15885314->15885326, apps: 1/12, packages: 0/0
+[2022-08-30 17:36:15] Requesting 27 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:36:16] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:36:16] Requesting 1 apps, 0 packages (full data, 1024 prev attempts)
+[2022-08-30 17:36:16] UpdatesJob: finished OK, apps updated 1 (2 KB), packages updated 0 (0 KB)
+[2022-08-30 17:36:17] Starting async write C:\Users\Server\Downloads\steamworks_sdk_155\sdk\tools\ContentBuilder\builder/appcache/appinfo.vdf (5950109 bytes)
+
+
+[2022-08-30 17:37:44] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:37:45] Packages changed: 
+[2022-08-30 17:37:45] Apps changed: 
+[2022-08-30 17:37:45] Change number 15885326->15885336, apps: 0/7, packages: 0/3
+[2022-08-30 17:37:45] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:37:46] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:37:46] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2022-08-30 17:40:44] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:40:45] Packages changed: 
+[2022-08-30 17:40:45] Apps changed: 
+[2022-08-30 17:40:45] Change number 15885336->15885361, apps: 0/19, packages: 0/2
+[2022-08-30 17:40:45] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:40:47] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:40:47] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2022-08-30 17:41:02] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:41:02] Apps changed: 
+[2022-08-30 17:41:02] Change number 15885361->15885364, apps: 0/3, packages: 0/0
+[2022-08-30 17:41:02] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:41:03] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:41:03] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2022-08-30 17:45:38] RequestAppInfoUpdate: AppIDs 7
+[2022-08-30 17:45:39] Packages changed: 
+[2022-08-30 17:45:39] Apps changed: 
+[2022-08-30 17:45:39] Change number 15885364->15885400, apps: 0/24, packages: 0/9
+[2022-08-30 17:45:39] Requesting 26 apps, 0 packages (meta data, 1024 prev attempts)
+[2022-08-30 17:45:40] Requested 25 app access tokens, 0 received, 25 denied
+[2022-08-30 17:45:40] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)

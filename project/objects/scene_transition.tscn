@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=3 uid="uid://b44jyw4iisnkq"]
+
+[sub_resource type="GDScript" id="GDScript_3etyb"]
+script/source = "
+extends CanvasLayer
+
+@onready var black = $Black
+@onready var black_animation = $Black/AnimationPlayer
+@onready var white = $White
+@onready var white_animation = $White/AnimationPlayer
+
+func _ready():
+	self.hide()
+	pass
+
+func change_scene(type,path):
+	if type == 'black':
+		black_transition(path)
+	if type == 'white':
+		white_transition(path)
+	pass
+	
+func black_transition(path):
+	black.visible = true
+	self.show()
+	self.set_layer(999)
+	black_animation.play('animation')
+	await black_animation.animation_finished
+	get_tree().change_scene_to_file(path)
+	black_animation.play_backwards('animation')
+	await black_animation.animation_finished
+	self.set_layer(-1)
+	self.hide()
+	black.visible = false
+	pass
+
+func white_transition(path):
+	white.visible = true
+	self.show()
+	self.set_layer(999)
+	white_animation.play('animation')
+	await white_animation.animation_finished
+	get_tree().change_scene_to_file(path)
+	white_animation.play_backwards('animation')
+	await white_animation.animation_finished
+	self.set_layer(-1)
+	self.hide()
+	white.visible = false
+	pass
+"
+
+[sub_resource type="Animation" id="Animation_fsb0i"]
+resource_name = "animation"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_12iga"]
+_data = {
+"animation": SubResource("Animation_fsb0i")
+}
+
+[sub_resource type="Animation" id="Animation_tcfdu"]
+resource_name = "animation"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5l0io"]
+_data = {
+"animation": SubResource("Animation_tcfdu")
+}
+
+[node name="SceneTransition" type="CanvasLayer"]
+process_mode = 3
+script = SubResource("GDScript_3etyb")
+
+[node name="Black" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="Black"]
+z_index = 99
+layout_mode = 0
+offset_left = -10004.0
+offset_top = -4334.0
+offset_right = 13360.0
+offset_bottom = 7049.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Black"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_12iga")
+}
+
+[node name="White" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="White"]
+z_index = 99
+layout_mode = 0
+offset_left = -10004.0
+offset_top = -4334.0
+offset_right = 13360.0
+offset_bottom = 7049.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="White"]
+libraries = {
+"": SubResource("AnimationLibrary_5l0io")
+}

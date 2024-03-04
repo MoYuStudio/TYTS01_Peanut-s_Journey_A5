@@ -1,0 +1,71 @@
+
+# TinyLand 弹丸之地 瓷砖
+
+# 地面 0   - 255
+# 农业 256 - 511
+# 工业 512 - 768
+# 金融 769 - 1024
+
+0: 
+  name: air
+
+1:
+  name: grass
+
+2:
+  name: dirt
+
+3:
+  name: sand
+
+4:
+  name: stone
+
+5:
+  name: water
+  animation_timer: 10
+  animation_frame: 1
+
+13:
+  animation_timer: 10
+  animation_frame: 1
+
+256:
+  name: normal_farmland_lv0
+  cost: {type: coin,num: 0}
+  buildable: [1,2]
+  grow_timer: 100
+  grow_next: 257
+
+257:
+  name: normal_farmland_lv1
+  cost: {type: coin,num: 0}
+  buildable: [1,2]
+  grow_timer: 100
+  grow_next: 258
+
+258:
+  name: normal_farmland_lv2
+  grow_timer: 100
+  grow_next: 259
+
+259:
+  name: normal_farmland_lv3
+  grow_timer: 100
+  grow_next: 260
+
+260:
+  name: normal_farmland_lv4
+  grow_timer: 100
+  grow_next: 261
+
+261:
+  name: normal_farmland_lv4
+  animation_timer: 10
+  animation_frame: 1
+
+262:
+  name: windmill_lv0
+  cost: {type: coin,num: 0}
+  animation_timer: 10
+  animation_frame: 1

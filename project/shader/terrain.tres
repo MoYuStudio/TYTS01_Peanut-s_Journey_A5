@@ -1,0 +1,43 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://clhdhthgfyk6l"]
+
+[ext_resource type="Texture2D" uid="uid://b8ywbl5a56y15" path="res://resource/tile/grass.png" id="1_0v7nk"]
+[ext_resource type="Texture2D" uid="uid://pg1f8rxwxwhs" path="res://resource/tile/stone_mat.png" id="2_46m6g"]
+
+[sub_resource type="Shader" id="Shader_5rnw1"]
+code = "
+shader_type spatial;
+
+uniform sampler2D terrain_grass;
+uniform sampler2D terrain_rock;
+
+uniform float min_grass_height = -1.6;
+uniform float max_rock_height = 1.6;
+
+varying float vertex_y;
+
+uniform vec2 uvscale = vec2(5);
+
+void fragment() {
+	float vert_weight = vertex_y;
+	
+	vec3 grass = texture(terrain_grass, UV*uvscale).rgb;
+	vec3 rock = texture(terrain_rock, UV*uvscale).rgb;
+	
+	float weight = smoothstep(min_grass_height,max_rock_height,vert_weight);
+	vec3 final_color = mix(grass, rock, weight);
+	
+	ALBEDO = final_color.rgb;
+}
+
+void vertex(){
+	vertex_y = VERTEX.y;
+}"
+
+[resource]
+render_priority = 0
+shader = SubResource("Shader_5rnw1")
+shader_parameter/min_grass_height = -1.6
+shader_parameter/max_rock_height = 1.6
+shader_parameter/uvscale = Vector2(5, 5)
+shader_parameter/terrain_grass = ExtResource("1_0v7nk")
+shader_parameter/terrain_rock = ExtResource("2_46m6g")
