@@ -2,17 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="1_2onsr"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_107w7"]
-[ext_resource type="PackedScene" uid="uid://c5od51xya6tne" path="res://models/blaste_moyu.tscn" id="2_qvvnl"]
+[ext_resource type="PackedScene" uid="uid://c5od51xya6tne" path="res://models/blaste.tscn" id="2_rchdk"]
 
 [resource]
 script = ExtResource("2_107w7")
-model = ExtResource("2_qvvnl")
+model = ExtResource("2_rchdk")
 position = Vector3(0, 0, 0)
 rotation = Vector3(0, 180, 0)
 muzzle_position = Vector3(0.1, -0.4, 1.5)
 cooldown = 0.25
 max_distance = 10
-damage = 30.0
+damage = 25.0
 spread = 1.0
 shot_count = 3
 knockback = 40

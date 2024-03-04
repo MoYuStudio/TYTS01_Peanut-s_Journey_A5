@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5od51xya6tne"]
-
-[ext_resource type="ArrayMesh" uid="uid://c3ksyp3cnyufo" path="res://models/blaster.obj" id="1_wlpgb"]
-
-[node name="Blaster" type="MeshInstance3D"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.17843, 0.957974)
-mesh = ExtResource("1_wlpgb")
