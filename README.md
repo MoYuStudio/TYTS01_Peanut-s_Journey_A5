@@ -1,10 +1,10 @@
-<p align="center"><img src="project/icon.png"/></p>
+<p align="center"><img src="/project/icon.png"/></p>
 
 # TYTS01_Peanut-s_Journey_A5
 
 ### Screenshot
 
-<p align="center"><img src="project/screenshots/screenshot.png"/></p>
+<p align="center"><img src="/project/screenshots/screenshot.png"/></p>
 
 ### Controls
 
