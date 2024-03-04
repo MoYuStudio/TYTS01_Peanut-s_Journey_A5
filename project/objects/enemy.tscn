@@ -3,17 +3,17 @@
 [ext_resource type="Script" path="res://objects/enemy.gd" id="1_jg24b"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="3_iblw5"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_t24ww"]
-height = 1.0
+[sub_resource type="BoxMesh" id="BoxMesh_bt218"]
+size = Vector3(0.6, 0.9, 0.6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gly3v"]
-albedo_color = Color(1, 0, 0, 1)
+albedo_color = Color(0.462745, 0.462745, 0.462745, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_hjx1m"]
-size = Vector3(0.3, 0.3, 1)
+size = Vector3(0.25, 0.25, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j1oxj"]
-albedo_color = Color(0.32549, 0.4, 0.686275, 1)
+albedo_color = Color(0.513726, 0.513726, 0.513726, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_iix87"]
 radius = 0.75
@@ -25,7 +25,7 @@ script = ExtResource("1_jg24b")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("CapsuleMesh_t24ww")
+mesh = SubResource("BoxMesh_bt218")
 surface_material_override/0 = SubResource("StandardMaterial3D_gly3v")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
