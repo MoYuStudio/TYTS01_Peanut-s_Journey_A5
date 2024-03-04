@@ -1,4 +1,4 @@
-<p align="center"><img src="/project/icon.png"/></p>
+<p align="center"><img src="/project/icon_x16.png"/></p>
 
 # TYTS01_Peanut-s_Journey_A5
 
