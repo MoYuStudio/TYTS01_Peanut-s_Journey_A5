@@ -8,6 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_ics1s"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1h8mp"]
+radius = 0.3
+height = 1.5
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
@@ -19,6 +21,7 @@ script = ExtResource("1_ffboj")
 weapons = Array[Resource("res://scripts/weapon.gd")]([ExtResource("2_wqgka"), ExtResource("3_eny7g")])
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
 mesh = SubResource("CapsuleMesh_1h8mp")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
