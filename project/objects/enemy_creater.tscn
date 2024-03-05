@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://5snrvdls18pj"]
+
+[sub_resource type="GDScript" id="GDScript_dt8s0"]
+script/source = "
+extends Node3D
+
+var monster_scene = preload(\"res://objects/enemy.tscn\")
+
+# 刷新间隔和计时器
+var spawn_interval = 3.0
+var spawn_timer = 0.0
+
+# 最大怪物数量
+var max_monsters = 9
+
+# 当前场景中的怪物数量
+var current_monsters = 0
+
+func _ready():
+	# 初始化计时器
+	spawn_timer = spawn_interval
+
+func _process(delta):
+	# 更新计时器
+	spawn_timer -= delta
+
+	# 检查是否到了刷新时间且未达到最大怪物数量
+	if spawn_timer <= 0 and current_monsters < max_monsters:
+		# 刷新一个怪物
+		spawn_monster()
+		# 重置计时器
+		spawn_timer = spawn_interval
+
+func spawn_monster():
+	# 实例化怪物场景
+	var monster = monster_scene.instantiate()
+	
+	# 设置怪物的位置（可以根据需要调整）
+	monster.position = position# + Vector3(0, 1, 0)
+	
+	# 将怪物添加到场景中
+	get_parent().add_child(monster)
+	
+	# 增加当前怪物计数
+	current_monsters += 1
+	# 连接怪物的信号（例如'died'），以便在怪物死亡时更新计数
+	# monster.connect(\"died\", self, \"_on_monster_died\")
+
+func _on_monster_died():
+	# 怪物死亡时减少计数
+	current_monsters -= 1
+"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_74ald"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rep0r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am3ds"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.25098)
+roughness = 0.0
+grow = true
+
+[node name="EnemyCreater" type="Node3D"]
+script = SubResource("GDScript_dt8s0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("SphereShape3D_74ald")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("SphereMesh_rep0r")
+surface_material_override/0 = SubResource("StandardMaterial3D_am3ds")

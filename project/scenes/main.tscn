@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://c71evdjblk5wp" path="res://objects/wall_high.tscn" id="7_cabne"]
 [ext_resource type="Texture2D" uid="uid://cqygwt0dfusep" path="res://interface/hp_bar_progress.png" id="7_iciwq"]
 [ext_resource type="Texture2D" uid="uid://b8mc7c1dg0ch0" path="res://models/render/machinegun.png" id="7_incj1"]
-[ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="8_7ty2f"]
 [ext_resource type="Texture2D" uid="uid://mqlwbwmbxayi" path="res://interface/input/keyboard_e_outline.png" id="8_855t4"]
 [ext_resource type="Material" uid="uid://cjqcl1kyga14h" path="res://shader/water_low_poly.tres" id="12_lhbty"]
+[ext_resource type="PackedScene" uid="uid://5snrvdls18pj" path="res://objects/enemy_creater.tscn" id="12_qs07p"]
 
 [sub_resource type="Animation" id="Animation_bi6i1"]
 resource_name = "HurtFilter"
@@ -124,9 +124,14 @@ texture = ExtResource("8_855t4")
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Enemy" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("8_7ty2f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092289, 0.5, 19.513)
-player = NodePath("../../Player")
+[node name="EnemyCreater" parent="Enemies" instance=ExtResource("12_qs07p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -32)
+
+[node name="EnemyCreater2" parent="Enemies" instance=ExtResource("12_qs07p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.5, -32)
+
+[node name="EnemyCreater3" parent="Enemies" instance=ExtResource("12_qs07p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, -32)
 
 [node name="Level" type="Node" parent="."]
 

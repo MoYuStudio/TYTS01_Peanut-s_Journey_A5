@@ -1,11 +1,13 @@
 
 extends Node3D
 
-@export var player: Node3D
+@onready var player = get_parent().get_parent().get_node("Player")
 
 @onready var raycast = $RayCast
 @onready var muzzle_a = $MuzzleA
 @onready var muzzle_b = $MuzzleB
+
+signal died
 
 var health := 100
 var time := 0.0
@@ -48,6 +50,7 @@ func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")
 
 	destroyed = true
+	died.emit()
 	queue_free()
 
 # 当计时器达到 0 时射击
