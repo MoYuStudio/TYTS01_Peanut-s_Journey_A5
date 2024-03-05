@@ -3,6 +3,7 @@ extends Resource
 class_name Weapon
 
 @export_subgroup("Model")
+@export var name: String # 武器名称
 @export var model: PackedScene  # 武器模型
 @export var position: Vector3  # 屏幕上的位置
 @export var rotation: Vector3  # 屏幕上的旋转

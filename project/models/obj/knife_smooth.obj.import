@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://01j2ex6faog7"
+path="res://.godot/imported/knife_smooth.obj-b6a2f0dd88b4b2fccdb3da1ce3240be9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/knife_smooth.obj-b6a2f0dd88b4b2fccdb3da1ce3240be9.mesh"]
+
+source_file="res://models/obj/knife_smooth.obj"
+dest_files=["res://.godot/imported/knife_smooth.obj-b6a2f0dd88b4b2fccdb3da1ce3240be9.mesh", "res://.godot/imported/knife_smooth.obj-b6a2f0dd88b4b2fccdb3da1ce3240be9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

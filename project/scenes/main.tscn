@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=16 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://b3dksqa4bdkqk" path="res://skybox/world_environment.tres" id="1_pou40"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
@@ -12,6 +12,28 @@
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large.tscn" id="7_wggef"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="8_7ty2f"]
 [ext_resource type="Material" uid="uid://cjqcl1kyga14h" path="res://shader/water_low_poly.tres" id="12_lhbty"]
+
+[sub_resource type="Animation" id="Animation_bi6i1"]
+resource_name = "HurtFilter"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HurtFilter:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 0), Color(1, 0, 0, 0.25098), Color(1, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jj6v1"]
+_data = {
+"HurtFilter": SubResource("Animation_bi6i1")
+}
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_a6q5a"]
 size = Vector2(128, 128)
@@ -35,6 +57,14 @@ shadow_blur = 3.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("3_s8mkj")
+
+[node name="HurtFilter" type="ColorRect" parent="HUD"]
+texture_filter = 1
+offset_left = -126.0
+offset_top = -93.0
+offset_right = 1403.0
+offset_bottom = 841.0
+color = Color(1, 0, 0, 0)
 
 [node name="Crosshair" type="TextureRect" parent="HUD"]
 texture_filter = 1
@@ -65,6 +95,15 @@ texture_over = ExtResource("6_elbaa")
 texture_progress = ExtResource("7_iciwq")
 tint_under = Color(1, 1, 1, 0)
 tint_progress = Color(0, 1, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD"]
+libraries = {
+"": SubResource("AnimationLibrary_jj6v1")
+}
+
+[node name="WeaponSprite" type="Sprite2D" parent="HUD"]
+position = Vector2(164, 618)
+scale = Vector2(0.6, 0.6)
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -133,3 +172,4 @@ mesh = SubResource("PlaneMesh_a6q5a")
 surface_material_override/0 = ExtResource("12_lhbty")
 
 [connection signal="health_updated" from="Player" to="HUD" method="_on_health_updated"]
+[connection signal="weapon_change" from="Player" to="HUD" method="_on_player_weapon_change"]

@@ -28,11 +28,14 @@ var previously_floored := false
 var jump_single := true
 var jump_double := true
 
-var container_offset = Vector3(1.2, -1.1, -2.75)
+var container_offset = Vector3(0, -0.8, -2.9)
+# 腰射 Vector3(1.2, -1.1, -2.75) 举镜 Vector3(0, -0.8, -2.75)
 
 var tween:Tween
 
 signal health_updated
+
+signal weapon_change
 
 @onready var camera = $Head/Camera
 @onready var raycast = $Head/Camera/RayCast
@@ -202,7 +205,9 @@ func action_shoot():
 		
 		muzzle.rotation_degrees.z = randf_range(-45, 45)
 		muzzle.scale = Vector3.ONE * randf_range(0.40, 0.75)
-		muzzle.position = container.position - weapon.muzzle_position
+		muzzle.position = container.position - weapon.muzzle_position # 火光补偿
+		muzzle.position.x -= -0.1
+		muzzle.position.y -= -0.1
 		
 		blaster_cooldown.start(weapon.cooldown)
 		
@@ -286,6 +291,8 @@ func change_weapon():
 	
 	raycast.target_position = Vector3(0, 0, -1) * weapon.max_distance
 	crosshair.texture = weapon.crosshair
+	
+	weapon_change.emit(weapon.name)
 
 func damage(amount):
 	

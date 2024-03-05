@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfsrnk67m7h6o"
+path="res://.godot/imported/uziLongSilencer.obj-966c069027c11a398b1aa37bab96cab6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/uziLongSilencer.obj-966c069027c11a398b1aa37bab96cab6.mesh"]
+
+source_file="res://models/obj/uziLongSilencer.obj"
+dest_files=["res://.godot/imported/uziLongSilencer.obj-966c069027c11a398b1aa37bab96cab6.mesh", "res://.godot/imported/uziLongSilencer.obj-966c069027c11a398b1aa37bab96cab6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

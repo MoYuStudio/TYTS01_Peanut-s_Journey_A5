@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5hqxx7bb6gmm"
+path="res://.godot/imported/uziGoldSilencer.obj-e27ee442676a401151eb9c68d46cd5ae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/uziGoldSilencer.obj-e27ee442676a401151eb9c68d46cd5ae.mesh"]
+
+source_file="res://models/obj/uziGoldSilencer.obj"
+dest_files=["res://.godot/imported/uziGoldSilencer.obj-e27ee442676a401151eb9c68d46cd5ae.mesh", "res://.godot/imported/uziGoldSilencer.obj-e27ee442676a401151eb9c68d46cd5ae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
