@@ -18,4 +18,5 @@ spread = 0.5
 shot_count = 1
 knockback = 0.3
 sound_shoot = "sounds/blaster_repeater.ogg"
+sound_hit = "sounds/glass_005.ogg"
 crosshair = ExtResource("1_uejf8")

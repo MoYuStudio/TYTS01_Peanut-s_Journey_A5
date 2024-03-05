@@ -124,7 +124,7 @@ texture = ExtResource("8_855t4")
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="EnemyFlying" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("8_7ty2f")]
+[node name="Enemy" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("8_7ty2f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092289, 0.5, 19.513)
 player = NodePath("../../Player")
 

@@ -228,6 +228,7 @@ func action_shoot():
 			
 			if collider.has_method("damage"):
 				collider.damage(weapon.damage)
+				Audio.play(weapon.sound_hit)
 			
 			# 创建冲击动画
 			

@@ -19,6 +19,7 @@ class_name Weapon
 
 @export_subgroup("Sounds")
 @export var sound_shoot: String  # 声音文件路径
+@export var sound_hit: String  # 声音文件路径
 
 @export_subgroup("Crosshair")
 @export var crosshair: Texture2D  # 屏幕上十字准线的图像

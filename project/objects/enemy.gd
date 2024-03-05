@@ -26,6 +26,7 @@ func _process(delta):
 	# 向玩家移动
 	var direction_to_player = (player.position - position).normalized()
 	target_position += direction_to_player * move_speed * delta
+	
 
 	time += delta
 
@@ -34,7 +35,7 @@ func _process(delta):
 # 受到玩家的伤害
 
 func damage(amount):
-	Audio.play("sounds/enemy_hurt.ogg")
+	# Audio.play("sounds/enemy_hurt.ogg")
 
 	health -= amount
 
