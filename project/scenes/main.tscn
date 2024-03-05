@@ -1,10 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=19 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://b3dksqa4bdkqk" path="res://skybox/world_environment.tres" id="1_pou40"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="3_s8mkj"]
+[ext_resource type="PackedScene" uid="uid://dpm3l05d7fu35" path="res://objects/platform.tscn" id="5_3s40e"]
 [ext_resource type="Texture2D" uid="uid://bvud5u0bkd6su" path="res://interface/hp_bar_under.png" id="5_ckq8k"]
 [ext_resource type="Texture2D" uid="uid://c0nq58aqj78th" path="res://interface/hp_bar_over.png" id="6_elbaa"]
+[ext_resource type="PackedScene" uid="uid://c71evdjblk5wp" path="res://objects/wall_high.tscn" id="7_cabne"]
 [ext_resource type="Texture2D" uid="uid://cqygwt0dfusep" path="res://interface/hp_bar_progress.png" id="7_iciwq"]
 [ext_resource type="Texture2D" uid="uid://b8mc7c1dg0ch0" path="res://models/render/machinegun.png" id="7_incj1"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="8_7ty2f"]
@@ -137,6 +139,21 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ec8yt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Floor"]
 shape = SubResource("BoxShape3D_va2bl")
+
+[node name="WallHigh" parent="Level" instance=ExtResource("7_cabne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="WallHigh2" parent="Level" instance=ExtResource("7_cabne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="WallHigh3" parent="Level" instance=ExtResource("7_cabne")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, 0)
+
+[node name="WallHigh4" parent="Level" instance=ExtResource("7_cabne")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, 0)
+
+[node name="Platform" parent="Level" instance=ExtResource("5_3s40e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="Decoration" type="Node" parent="."]
 

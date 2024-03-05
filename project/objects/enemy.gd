@@ -1,3 +1,4 @@
+
 extends Node3D
 
 @export var player: Node3D
@@ -11,15 +12,20 @@ var time := 0.0
 var target_position: Vector3
 var destroyed := false
 
+var move_speed := 2.0  # 敌人每秒移动的单位数
+
 # 准备好后，保存初始位置
 
 func _ready():
 	target_position = position
 
-
 func _process(delta):
 	self.look_at(player.position + Vector3(0, 0.5, 0), Vector3.UP, true)  # 看向玩家
 	target_position.y += (cos(time * 5) * 1) * delta  # 正弦运动（上下）
+	
+	# 向玩家移动
+	var direction_to_player = (player.position - position).normalized()
+	target_position += direction_to_player * move_speed * delta
 
 	time += delta
 
