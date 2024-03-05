@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export_subgroup("Properties") # 特性组
 @export var movement_speed = 6
+var movement_speed_backup = movement_speed
 @export var jump_strength = 9
 
 @export_subgroup("Weapons") # 武器组
@@ -160,6 +161,11 @@ func handle_controls(_delta):
 			jump_double = false
 			
 		if(jump_single): action_jump()
+		
+	if Input.is_action_just_pressed("run"):
+		movement_speed *= 2
+	if Input.is_action_just_released("run"):
+		movement_speed = movement_speed_backup
 		
 	# 武器切换
 	

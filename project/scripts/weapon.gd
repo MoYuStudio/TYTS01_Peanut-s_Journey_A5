@@ -10,7 +10,7 @@ class_name Weapon
 @export var muzzle_position: Vector3  # 枪口火焰在屏幕上的位置
 
 @export_subgroup("Properties")
-@export_range(0.1, 1) var cooldown: float = 0.1  # 射速
+@export_range(0.01, 1) var cooldown: float = 0.1  # 射速
 @export_range(1, 1000) var max_distance: int = 10  # 射程
 @export_range(0, 100) var damage: float = 25  # 每击伤害
 @export_range(0, 5) var spread: float = 0  # 每次散布
