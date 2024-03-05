@@ -162,6 +162,8 @@ func handle_controls(_delta):
 			
 		if(jump_single): action_jump()
 		
+	# 跑步
+	
 	if Input.is_action_just_pressed("run"):
 		movement_speed *= 2
 	if Input.is_action_just_released("run"):
