@@ -35,6 +35,7 @@ gravity = Vector3(0, 0, 0)
 linear_accel_max = 100.0
 linear_accel_curve = SubResource("CurveTexture_6khji")
 scale_min = 0.1
+scale_max = 0.6
 scale_curve = SubResource("CurveTexture_3p8au")
 turbulence_enabled = true
 
@@ -48,8 +49,8 @@ size = Vector3(0.1, 0.1, 0.1)
 [node name="GPUParticles3D" type="GPUParticles3D"]
 cast_shadow = 0
 emitting = false
-amount = 9
-lifetime = 0.6
+amount = 6
+lifetime = 0.3
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_hx7so")
 draw_pass_1 = SubResource("BoxMesh_nwsvo")
