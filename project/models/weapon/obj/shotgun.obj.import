@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkpgq2eduany2"
+path="res://.godot/imported/shotgun.obj-4354c25a2440feebf7228274152ca7bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shotgun.obj-4354c25a2440feebf7228274152ca7bc.mesh"]
+
+source_file="res://models/weapon/obj/shotgun.obj"
+dest_files=["res://.godot/imported/shotgun.obj-4354c25a2440feebf7228274152ca7bc.mesh", "res://.godot/imported/shotgun.obj-4354c25a2440feebf7228274152ca7bc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

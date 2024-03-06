@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c58rgkn3e010b"
+path="res://.godot/imported/scaffolding_structure.obj-8b3f659e3763f632fbb2a6991b5e6eb1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scaffolding_structure.obj-8b3f659e3763f632fbb2a6991b5e6eb1.mesh"]
+
+source_file="res://models/tile/obj/scaffolding_structure.obj"
+dest_files=["res://.godot/imported/scaffolding_structure.obj-8b3f659e3763f632fbb2a6991b5e6eb1.mesh", "res://.godot/imported/scaffolding_structure.obj-8b3f659e3763f632fbb2a6991b5e6eb1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

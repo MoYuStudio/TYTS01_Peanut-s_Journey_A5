@@ -3,13 +3,13 @@
 [ext_resource type="Environment" uid="uid://b3dksqa4bdkqk" path="res://skybox/world_environment.tres" id="1_pou40"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="3_s8mkj"]
-[ext_resource type="PackedScene" uid="uid://dpm3l05d7fu35" path="res://objects/platform.tscn" id="5_3s40e"]
 [ext_resource type="Texture2D" uid="uid://bvud5u0bkd6su" path="res://interface/hp_bar_under.png" id="5_ckq8k"]
 [ext_resource type="Texture2D" uid="uid://c0nq58aqj78th" path="res://interface/hp_bar_over.png" id="6_elbaa"]
-[ext_resource type="PackedScene" uid="uid://c71evdjblk5wp" path="res://objects/wall_high.tscn" id="7_cabne"]
 [ext_resource type="Texture2D" uid="uid://cqygwt0dfusep" path="res://interface/hp_bar_progress.png" id="7_iciwq"]
-[ext_resource type="Texture2D" uid="uid://b8mc7c1dg0ch0" path="res://models/render/machinegun.png" id="7_incj1"]
+[ext_resource type="Texture2D" uid="uid://b8mc7c1dg0ch0" path="res://models/weapon/render/machinegun.png" id="7_incj1"]
 [ext_resource type="Texture2D" uid="uid://mqlwbwmbxayi" path="res://interface/input/keyboard_e_outline.png" id="8_855t4"]
+[ext_resource type="Texture2D" uid="uid://dewqgav33gt18" path="res://models/tile/textures/concrete.png" id="10_c40xx"]
+[ext_resource type="PackedScene" uid="uid://h4y6hfnnuqdi" path="res://objects/tilemap.tscn" id="10_py4fb"]
 [ext_resource type="Material" uid="uid://cjqcl1kyga14h" path="res://shader/water_low_poly.tres" id="12_lhbty"]
 [ext_resource type="PackedScene" uid="uid://5snrvdls18pj" path="res://objects/enemy_creater.tscn" id="12_qs07p"]
 
@@ -38,8 +38,10 @@ _data = {
 [sub_resource type="PlaneMesh" id="PlaneMesh_05j3a"]
 size = Vector2(256, 256)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ec8yt"]
-albedo_color = Color(0.509804, 0.509804, 0.509804, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6vo85"]
+albedo_texture = ExtResource("10_c40xx")
+uv1_scale = Vector3(128, 128, 128)
+texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_va2bl"]
 size = Vector3(256, 1, 256)
@@ -125,40 +127,26 @@ texture = ExtResource("8_855t4")
 [node name="Enemies" type="Node" parent="."]
 
 [node name="EnemyCreater" parent="Enemies" instance=ExtResource("12_qs07p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -32)
+transform = Transform3D(-0.99821, 0, -8.72663e-08, 0, 0.99821, 0, 8.72663e-08, 0, -0.99821, 0, 0, -32)
 
 [node name="EnemyCreater2" parent="Enemies" instance=ExtResource("12_qs07p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.5, -32)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, -32)
 
 [node name="EnemyCreater3" parent="Enemies" instance=ExtResource("12_qs07p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, -32)
+transform = Transform3D(-1.00202, 0, -8.75992e-08, 0, 1.00202, 0, 8.75992e-08, 0, -1.00202, 6, 0, -32)
 
 [node name="Level" type="Node" parent="."]
 
-[node name="Floor" type="StaticBody3D" parent="Level"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Floor"]
+[node name="Floor" type="MeshInstance3D" parent="Level"]
 mesh = SubResource("PlaneMesh_05j3a")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_ec8yt")
+surface_material_override/0 = SubResource("StandardMaterial3D_6vo85")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Floor"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Floor/StaticBody3D"]
 shape = SubResource("BoxShape3D_va2bl")
 
-[node name="WallHigh" parent="Level" instance=ExtResource("7_cabne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-
-[node name="WallHigh2" parent="Level" instance=ExtResource("7_cabne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-
-[node name="WallHigh3" parent="Level" instance=ExtResource("7_cabne")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, 0)
-
-[node name="WallHigh4" parent="Level" instance=ExtResource("7_cabne")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, 0)
-
-[node name="Platform" parent="Level" instance=ExtResource("5_3s40e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+[node name="Tilemap" parent="Level" instance=ExtResource("10_py4fb")]
 
 [node name="Decoration" type="Node" parent="."]
 

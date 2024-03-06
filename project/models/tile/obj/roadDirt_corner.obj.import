@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7pamjnv7cm2l"
+path="res://.godot/imported/roadDirt_corner.obj-30d0ab2f0bbb3c09d4bf2daa76be8d3b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadDirt_corner.obj-30d0ab2f0bbb3c09d4bf2daa76be8d3b.mesh"]
+
+source_file="res://models/tile/obj/roadDirt_corner.obj"
+dest_files=["res://.godot/imported/roadDirt_corner.obj-30d0ab2f0bbb3c09d4bf2daa76be8d3b.mesh", "res://.godot/imported/roadDirt_corner.obj-30d0ab2f0bbb3c09d4bf2daa76be8d3b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qceb7fyxj7p"
+path="res://.godot/imported/roadDirt_center.obj-7a143d5c7d822e7f0fd2d4a6e8047bee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadDirt_center.obj-7a143d5c7d822e7f0fd2d4a6e8047bee.mesh"]
+
+source_file="res://models/tile/obj/roadDirt_center.obj"
+dest_files=["res://.godot/imported/roadDirt_center.obj-7a143d5c7d822e7f0fd2d4a6e8047bee.mesh", "res://.godot/imported/roadDirt_center.obj-7a143d5c7d822e7f0fd2d4a6e8047bee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df5hg3wemccxa"
+path="res://.godot/imported/detailCables_typeA.obj-d6dd3f066d36a0f05d12675cab6535b5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailCables_typeA.obj-d6dd3f066d36a0f05d12675cab6535b5.mesh"]
+
+source_file="res://models/tile/obj/detailCables_typeA.obj"
+dest_files=["res://.godot/imported/detailCables_typeA.obj-d6dd3f066d36a0f05d12675cab6535b5.mesh", "res://.godot/imported/detailCables_typeA.obj-d6dd3f066d36a0f05d12675cab6535b5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://yasmkxsldx8a"
+path="res://.godot/imported/roofMetal_typeB.obj-125e2c135491f316e4efd5d61d65822e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roofMetal_typeB.obj-125e2c135491f316e4efd5d61d65822e.mesh"]
+
+source_file="res://models/tile/obj/roofMetal_typeB.obj"
+dest_files=["res://.godot/imported/roofMetal_typeB.obj-125e2c135491f316e4efd5d61d65822e.mesh", "res://.godot/imported/roofMetal_typeB.obj-125e2c135491f316e4efd5d61d65822e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

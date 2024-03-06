@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cob3n1fa4sw7f"
+path="res://.godot/imported/tree_large.obj-efb59b275bc3079cb4949a820187a6eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tree_large.obj-efb59b275bc3079cb4949a820187a6eb.mesh"]
+
+source_file="res://models/tile/obj/tree_large.obj"
+dest_files=["res://.godot/imported/tree_large.obj-efb59b275bc3079cb4949a820187a6eb.mesh", "res://.godot/imported/tree_large.obj-efb59b275bc3079cb4949a820187a6eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

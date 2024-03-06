@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dh6chyaw77eyx"
+path="res://.godot/imported/wallB_open.obj-19915d3f12e5833a5cdb1dc16bdabd8c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallB_open.obj-19915d3f12e5833a5cdb1dc16bdabd8c.mesh"]
+
+source_file="res://models/tile/obj/wallB_open.obj"
+dest_files=["res://.godot/imported/wallB_open.obj-19915d3f12e5833a5cdb1dc16bdabd8c.mesh", "res://.godot/imported/wallB_open.obj-19915d3f12e5833a5cdb1dc16bdabd8c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://p5535ifh5ton"
+path="res://.godot/imported/wallA_window.obj-4b22cc328500e1d3e933097052a3253d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallA_window.obj-4b22cc328500e1d3e933097052a3253d.mesh"]
+
+source_file="res://models/tile/obj/wallA_window.obj"
+dest_files=["res://.godot/imported/wallA_window.obj-4b22cc328500e1d3e933097052a3253d.mesh", "res://.godot/imported/wallA_window.obj-4b22cc328500e1d3e933097052a3253d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
