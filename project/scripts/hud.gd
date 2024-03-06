@@ -30,4 +30,4 @@ func _on_health_updated(health):
 	$AnimationPlayer.play("HurtFilter")
 
 func _on_player_weapon_change(weapon):
-	$WeaponSprite.texture = load("res://models/render/"+weapon+".png")
+	$WeaponSprite.texture = load("res://models/weapon/render/"+weapon+".png")
