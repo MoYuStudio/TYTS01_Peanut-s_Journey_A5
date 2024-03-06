@@ -1,22 +1,23 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=4 format=3 uid="uid://cu2gtxlcmbb34"]
 
-[ext_resource type="PackedScene" uid="uid://kcrp517jrqaf" path="res://models/weapon/machinegun.tscn" id="1_76h4a"]
-[ext_resource type="Texture2D" uid="uid://ce3lgq7foiusl" path="res://sprites/crosshair-repeater.png" id="1_uejf8"]
-[ext_resource type="Script" path="res://scripts/weapon.gd" id="2_tij5t"]
+[ext_resource type="Texture2D" uid="uid://ce3lgq7foiusl" path="res://sprites/crosshair-repeater.png" id="1_7x8ks"]
+[ext_resource type="Script" path="res://scripts/weapon.gd" id="2_ahe2m"]
+[ext_resource type="PackedScene" uid="uid://kcrp517jrqaf" path="res://models/weapon/machinegun.tscn" id="2_iljt1"]
 
 [resource]
-script = ExtResource("2_tij5t")
+script = ExtResource("2_ahe2m")
 name = "machinegun"
-model = ExtResource("1_76h4a")
+model = ExtResource("2_iljt1")
 position = Vector3(0, 0, 0)
 rotation = Vector3(0, 180, 0)
 muzzle_position = Vector3(0.1, -0.4, 1.5)
 cooldown = 0.09
-max_distance = 60
-damage = 30.0
+max_distance = 90
+damage = 20.0
+clip = 20
 spread = 0.5
 shot_count = 1
 knockback = 0.3
 sound_shoot = "sounds/blaster_repeater.ogg"
 sound_hit = "sounds/glass_005.ogg"
-crosshair = ExtResource("1_uejf8")
+crosshair = ExtResource("1_7x8ks")

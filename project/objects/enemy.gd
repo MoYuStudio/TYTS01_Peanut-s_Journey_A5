@@ -2,14 +2,13 @@
 extends CharacterBody3D
 
 @onready var player = get_parent().get_parent().get_node("Player")
+@onready var falling_object_scene = preload("res://objects/integral.tscn")
 
 @onready var raycast = $RayCast
 @onready var muzzle_a = $MuzzleA
 @onready var muzzle_b = $MuzzleB
 
 @onready var nav = $NavigationAgent3D
-
-signal died
 
 var health := 100
 var time := 0.0
@@ -50,7 +49,11 @@ func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")
 
 	destroyed = true
-	died.emit()
+	
+	var falling_object = falling_object_scene.instantiate()
+	falling_object.position = position
+	get_parent().add_child(falling_object)
+	
 	queue_free()
 
 # 当计时器达到 0 时射击
@@ -75,4 +78,4 @@ func _on_timer_timeout():
 
 			Audio.play("sounds/enemy_attack.ogg")
 
-			collider.damage(1)  # 对玩家造成伤害
+			collider.damage(3)  # 对玩家造成伤害

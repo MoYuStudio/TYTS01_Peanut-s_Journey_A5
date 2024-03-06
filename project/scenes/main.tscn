@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=23 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://b3dksqa4bdkqk" path="res://skybox/world_environment.tres" id="1_pou40"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cqygwt0dfusep" path="res://interface/hp_bar_progress.png" id="7_iciwq"]
 [ext_resource type="Texture2D" uid="uid://b8mc7c1dg0ch0" path="res://models/weapon/render/machinegun.png" id="7_incj1"]
 [ext_resource type="Texture2D" uid="uid://mqlwbwmbxayi" path="res://interface/input/keyboard_e_outline.png" id="8_855t4"]
+[ext_resource type="Texture2D" uid="uid://dkgy7wial6y5" path="res://interface/integral.png" id="9_1x01b"]
 [ext_resource type="Texture2D" uid="uid://dewqgav33gt18" path="res://models/tile/textures/concrete.png" id="10_c40xx"]
+[ext_resource type="FontFile" uid="uid://ckmyjvou4nb1f" path="res://fonts/kenney_pixel.ttf" id="10_gdtm6"]
 [ext_resource type="PackedScene" uid="uid://h4y6hfnnuqdi" path="res://objects/tilemap.tscn" id="10_py4fb"]
 [ext_resource type="Material" uid="uid://cjqcl1kyga14h" path="res://shader/water_low_poly.tres" id="12_lhbty"]
 [ext_resource type="PackedScene" uid="uid://5snrvdls18pj" path="res://objects/enemy_creater.tscn" id="12_qs07p"]
@@ -73,15 +75,15 @@ subdivide_depth = 128
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_pou40")
 
-[node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_elriq")]
-crosshair = NodePath("../HUD/Crosshair")
-
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
+transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
 shadow_enabled = true
 shadow_bias = 0.0
 shadow_opacity = 0.75
 shadow_blur = 3.0
+
+[node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_elriq")]
+crosshair = NodePath("../HUD/Crosshair")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("3_s8mkj")
@@ -140,6 +142,29 @@ texture_filter = 1
 position = Vector2(115, 53.3333)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_855t4")
+
+[node name="Integral" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1111.0
+offset_top = 71.0
+offset_right = 1111.0
+offset_bottom = 71.0
+
+[node name="Sprite" type="Sprite2D" parent="HUD/Integral"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("9_1x01b")
+
+[node name="Label" type="Label" parent="HUD/Integral"]
+texture_filter = 1
+offset_left = 32.0
+offset_top = -25.0
+offset_right = 96.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("10_gdtm6")
+theme_override_font_sizes/font_size = 64
+text = "100"
 
 [node name="Enemies" type="Node" parent="."]
 
