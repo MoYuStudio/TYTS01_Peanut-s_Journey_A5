@@ -24,7 +24,6 @@ var input_mouse: Vector2
 
 var health:int = 100
 var max_health = 100
-@onready var heal_timer = $Heal
 var heal_rate = 9 # 每秒回血量
 var time_to_heal = 6.0 # 无战斗多久后开始回血
 
@@ -50,6 +49,7 @@ signal weapon_change
 @onready var container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/Container
 @onready var sound_footsteps = $SoundFootsteps
 @onready var blaster_cooldown = $Cooldown
+@onready var heal_timer = $Heal
 
 @export var crosshair:TextureRect
 

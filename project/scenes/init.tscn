@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0fla2lsx43nr"]
+[gd_scene load_steps=9 format=3 uid="uid://b0fla2lsx43nr"]
 
 [ext_resource type="Texture2D" uid="uid://bnmx8pt0nk4u2" path="res://logo.png" id="1_8ng5c"]
+[ext_resource type="AudioStream" uid="uid://dmwhycaygu6jr" path="res://sounds/click_003.ogg" id="2_56nfl"]
 
 [sub_resource type="GDScript" id="GDScript_6o0tv"]
 script/source = "
@@ -111,5 +112,6 @@ libraries = {
 }
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
-volume_db = 6.4
+stream = ExtResource("2_56nfl")
+volume_db = 5.0
 autoplay = true
