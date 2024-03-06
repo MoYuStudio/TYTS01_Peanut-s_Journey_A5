@@ -23,6 +23,11 @@ var rotation_target: Vector3
 var input_mouse: Vector2
 
 var health:int = 100
+var max_health = 100
+@onready var heal_timer = $Heal
+var heal_rate = 9 # 每秒回血量
+var time_to_heal = 6.0 # 无战斗多久后开始回血
+
 var gravity := 0.0
 
 var previously_floored := false
@@ -56,6 +61,10 @@ func _ready():
 	
 	weapon = weapons[weapon_index] # 武器绝不能为零
 	initiate_change_weapon(weapon_index)
+	
+	heal_timer.wait_time = time_to_heal
+	# heal_timer.connect("timeout", self, "_on_HealTimer_timeout")
+	heal_timer.start()
 
 func _physics_process(delta):
 	
@@ -308,6 +317,14 @@ func damage(amount):
 	
 	health -= amount
 	health_updated.emit(health) # 更新 HUD 上的健康状况
+	heal_timer.start() # 受伤时重置计时器
 	
 	if health < 0:
 		get_tree().reload_current_scene() # 健康状况不佳时重置
+		
+func _on_heal_timeout():
+	# 开始回血逻辑
+	if health < max_health:
+		health += heal_rate
+		health = min(health, max_health) # 确保血量不会超过最大值
+		health_updated.emit(health) # 通知血量更新

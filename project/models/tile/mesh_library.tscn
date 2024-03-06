@@ -1,51 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://b17yv3dod18gy"]
+[gd_scene load_steps=4 format=3 uid="uid://b17yv3dod18gy"]
 
-[ext_resource type="Texture2D" uid="uid://dewqgav33gt18" path="res://models/tile/textures/concrete.png" id="1_jf6or"]
-[ext_resource type="ArrayMesh" uid="uid://cexpcqhqo7wo3" path="res://models/tile/obj/wallA.obj" id="2_tilw2"]
-[ext_resource type="Texture2D" uid="uid://br7qx5cjqtf0r" path="res://models/tile/textures/wall_lines.png" id="3_ib7t7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ej166"]
+albedo_color = Color(1, 0.486275, 0.266667, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_81y13"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q1hje"]
-albedo_texture = ExtResource("1_jf6or")
-uv1_scale = Vector3(2, 2, 2)
-uv2_scale = Vector3(2, 2, 2)
-texture_filter = 0
+material = SubResource("StandardMaterial3D_ej166")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xybb2"]
-size = Vector3(1, 0.5, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsxy7"]
-albedo_texture = ExtResource("3_ib7t7")
-normal_enabled = true
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mde53"]
-albedo_texture = ExtResource("1_jf6or")
-texture_filter = 0
 
 [node name="MeshLibrary" type="Node3D"]
 
 [node name="Cube" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("BoxMesh_81y13")
-skeleton = NodePath("StaticBody3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_q1hje")
+skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D"]
-shape = SubResource("BoxShape3D_xybb2")
-
-[node name="WallA" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-visible = false
-mesh = ExtResource("2_tilw2")
-surface_material_override/0 = SubResource("StandardMaterial3D_wsxy7")
-surface_material_override/1 = SubResource("StandardMaterial3D_mde53")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="WallA"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallA/StaticBody3D"]
 shape = SubResource("BoxShape3D_xybb2")

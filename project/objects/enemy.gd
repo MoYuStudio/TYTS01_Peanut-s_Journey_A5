@@ -78,4 +78,13 @@ func _on_timer_timeout():
 
 			Audio.play("sounds/enemy_attack.ogg")
 
-			collider.damage(3)  # 对玩家造成伤害
+			# collider.damage(3)  # 对玩家造成伤害
+			# 增加子弹散布
+			# 为射击方向添加随机偏移
+			var spread_range = 5.0  # 定义散布范围
+			var random_offset = Vector3(randf_range(-spread_range, spread_range), randf_range(-spread_range, spread_range), randf_range(-spread_range, spread_range))
+
+			if raycast.is_colliding():
+				var hit_collider = raycast.get_collider()
+				if hit_collider.has_method("damage"):
+					hit_collider.damage(3)  # 再次对玩家造成伤害，如果仍然是玩家

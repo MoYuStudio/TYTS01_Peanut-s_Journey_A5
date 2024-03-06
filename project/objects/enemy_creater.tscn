@@ -1,7 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://5snrvdls18pj"]
-
-[ext_resource type="ArrayMesh" uid="uid://cxmh7k047xw1a" path="res://models/tile/obj/truck_green.obj" id="1_fdhfx"]
-[ext_resource type="Texture2D" uid="uid://dagol8q01xi7b" path="res://models/tile/textures/truck_alien.png" id="2_q0w28"]
+[gd_scene load_steps=5 format=3 uid="uid://5snrvdls18pj"]
 
 [sub_resource type="GDScript" id="GDScript_dt8s0"]
 script/source = "
@@ -54,9 +51,10 @@ func _on_monster_died():
 	current_monsters -= 1
 "
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ad72f"]
-albedo_texture = ExtResource("2_q0w28")
-texture_filter = 0
+[sub_resource type="SphereMesh" id="SphereMesh_uuhvx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7p7sq"]
+albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_74ald"]
 
@@ -64,10 +62,10 @@ texture_filter = 0
 script = SubResource("GDScript_dt8s0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.00905, 0, 0, 0, 3.00905, 0, 0, 0, 3.00905, 0, 0, 0)
-mesh = ExtResource("1_fdhfx")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("SphereMesh_uuhvx")
 skeleton = NodePath("StaticBody3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_ad72f")
+surface_material_override/0 = SubResource("StandardMaterial3D_7p7sq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
