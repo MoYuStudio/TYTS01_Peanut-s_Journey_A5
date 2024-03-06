@@ -1,17 +1,17 @@
 [gd_scene load_steps=21 format=3 uid="uid://dxvvlck8lej3f"]
 
-[ext_resource type="Environment" uid="uid://b3dksqa4bdkqk" path="res://skybox/world_environment.tres" id="1_pou40"]
-[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
-[ext_resource type="Script" path="res://scripts/hud.gd" id="3_s8mkj"]
-[ext_resource type="Texture2D" uid="uid://bvud5u0bkd6su" path="res://interface/hp_bar_under.png" id="5_ckq8k"]
-[ext_resource type="Texture2D" uid="uid://c0nq58aqj78th" path="res://interface/hp_bar_over.png" id="6_elbaa"]
-[ext_resource type="Texture2D" uid="uid://cqygwt0dfusep" path="res://interface/hp_bar_progress.png" id="7_iciwq"]
-[ext_resource type="Texture2D" uid="uid://b8mc7c1dg0ch0" path="res://models/weapon/render/machinegun.png" id="7_incj1"]
-[ext_resource type="Texture2D" uid="uid://mqlwbwmbxayi" path="res://interface/input/keyboard_e_outline.png" id="8_855t4"]
-[ext_resource type="FontFile" uid="uid://dwo3w3m0bti6d" path="res://fonts/YouSheBiaoTiHei.ttf" id="9_lllx8"]
-[ext_resource type="PackedScene" uid="uid://h4y6hfnnuqdi" path="res://objects/tilemap.tscn" id="10_py4fb"]
-[ext_resource type="Material" uid="uid://cjqcl1kyga14h" path="res://shader/water_low_poly.tres" id="12_lhbty"]
-[ext_resource type="PackedScene" uid="uid://5snrvdls18pj" path="res://objects/enemy_creater.tscn" id="12_qs07p"]
+[ext_resource type="Environment" uid="uid://b3dksqa4bdkqk" path="res://skybox/world_environment.tres" id="1_dw8wj"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_qhoxq"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="3_08hhb"]
+[ext_resource type="Texture2D" uid="uid://bvud5u0bkd6su" path="res://interface/hp_bar_under.png" id="4_jwc8u"]
+[ext_resource type="Texture2D" uid="uid://c0nq58aqj78th" path="res://interface/hp_bar_over.png" id="5_6m18p"]
+[ext_resource type="Texture2D" uid="uid://cqygwt0dfusep" path="res://interface/hp_bar_progress.png" id="6_f6fqs"]
+[ext_resource type="Texture2D" uid="uid://b8mc7c1dg0ch0" path="res://models/weapon/render/machinegun.png" id="7_egx8i"]
+[ext_resource type="Texture2D" uid="uid://mqlwbwmbxayi" path="res://interface/input/keyboard_e_outline.png" id="8_l7xj1"]
+[ext_resource type="FontFile" uid="uid://dwo3w3m0bti6d" path="res://fonts/YouSheBiaoTiHei.ttf" id="9_tdter"]
+[ext_resource type="PackedScene" uid="uid://5snrvdls18pj" path="res://objects/enemy_creater.tscn" id="10_o66hd"]
+[ext_resource type="PackedScene" uid="uid://h4y6hfnnuqdi" path="res://objects/tilemap.tscn" id="11_7rvtt"]
+[ext_resource type="Material" uid="uid://cjqcl1kyga14h" path="res://shader/water_low_poly.tres" id="12_cdhju"]
 
 [sub_resource type="Animation" id="Animation_bi6i1"]
 resource_name = "HurtFilter"
@@ -70,7 +70,7 @@ subdivide_depth = 128
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_pou40")
+environment = ExtResource("1_dw8wj")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
@@ -79,18 +79,18 @@ shadow_bias = 0.0
 shadow_opacity = 0.75
 shadow_blur = 3.0
 
-[node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_elriq")]
+[node name="Player" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_qhoxq")]
 crosshair = NodePath("../HUD/Crosshair")
 
 [node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource("3_s8mkj")
+script = ExtResource("3_08hhb")
 
 [node name="HurtFilter" type="ColorRect" parent="HUD"]
 texture_filter = 1
-offset_left = -135.0
-offset_top = -90.0
-offset_right = 1394.0
-offset_bottom = 844.0
+offset_left = -325.0
+offset_top = -233.0
+offset_right = 4296.0
+offset_bottom = 2414.0
 color = Color(1, 0, 0, 0)
 
 [node name="Crosshair" type="TextureRect" parent="HUD"]
@@ -106,20 +106,19 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.35, 0.35)
 pivot_offset = Vector2(64, 64)
 
 [node name="HealthBar" type="TextureProgressBar" parent="HUD"]
 texture_filter = 1
-offset_left = 36.0
-offset_top = 36.0
-offset_right = 52.0
-offset_bottom = 40.0
-scale = Vector2(6, 6)
+offset_left = 53.0
+offset_top = 44.0
+offset_right = 117.0
+offset_bottom = 49.0
+scale = Vector2(32, 32)
 value = 100.0
-texture_under = ExtResource("5_ckq8k")
-texture_over = ExtResource("6_elbaa")
-texture_progress = ExtResource("7_iciwq")
+texture_under = ExtResource("4_jwc8u")
+texture_over = ExtResource("5_6m18p")
+texture_progress = ExtResource("6_f6fqs")
 tint_under = Color(1, 1, 1, 0)
 tint_progress = Color(0, 1, 0, 1)
 
@@ -130,45 +129,46 @@ libraries = {
 
 [node name="WeaponSprite" type="Sprite2D" parent="HUD"]
 texture_filter = 1
-position = Vector2(164, 618)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("7_incj1")
+position = Vector2(572, 1774)
+scale = Vector2(3, 3)
+texture = ExtResource("7_egx8i")
 
 [node name="Key" type="Sprite2D" parent="HUD/WeaponSprite"]
 texture_filter = 1
 position = Vector2(115, 53.3333)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("8_855t4")
+texture = ExtResource("8_l7xj1")
 
 [node name="Integral" type="Control" parent="HUD"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1039.0
-offset_top = 35.0
-offset_right = 1039.0
-offset_bottom = 35.0
+offset_left = 2918.0
+offset_top = 57.0
+offset_right = 2918.0
+offset_bottom = 57.0
 
 [node name="Mark" type="Label" parent="HUD/Integral"]
 texture_filter = 1
+layout_mode = 0
 offset_right = 64.0
 offset_bottom = 85.0
-theme_override_fonts/font = ExtResource("9_lllx8")
-theme_override_font_sizes/font_size = 64
+theme_override_fonts/font = ExtResource("9_tdter")
+theme_override_font_sizes/font_size = 256
 text = "￥"
 
 [node name="Label" type="Label" parent="HUD/Integral"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 64.0
-offset_right = 183.0
-offset_bottom = 84.0
-theme_override_fonts/font = ExtResource("9_lllx8")
-theme_override_font_sizes/font_size = 64
+offset_left = 256.0
+offset_right = 733.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("9_tdter")
+theme_override_font_sizes/font_size = 256
 text = "100"
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="EnemyCreater" parent="Enemies" instance=ExtResource("12_qs07p")]
+[node name="EnemyCreater" parent="Enemies" instance=ExtResource("10_o66hd")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -20)
 
 [node name="Level" type="Node" parent="."]
@@ -187,7 +187,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/NavigationRegion3D/Floor/StaticBody3D"]
 shape = SubResource("BoxShape3D_va2bl")
 
-[node name="Tilemap" parent="Level/NavigationRegion3D" instance=ExtResource("10_py4fb")]
+[node name="Tilemap" parent="Level/NavigationRegion3D" instance=ExtResource("11_7rvtt")]
 
 [node name="Decoration" type="Node" parent="."]
 
@@ -195,7 +195,7 @@ shape = SubResource("BoxShape3D_va2bl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 visible = false
 mesh = SubResource("PlaneMesh_a6q5a")
-surface_material_override/0 = ExtResource("12_lhbty")
+surface_material_override/0 = ExtResource("12_cdhju")
 
 [connection signal="health_updated" from="Player" to="HUD" method="_on_health_updated"]
 [connection signal="weapon_change" from="Player" to="HUD" method="_on_player_weapon_change"]

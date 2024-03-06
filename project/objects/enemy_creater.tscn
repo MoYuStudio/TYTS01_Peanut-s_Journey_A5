@@ -7,7 +7,7 @@ extends Node3D
 var monster_scene = preload(\"res://objects/enemy.tscn\")
 
 # 刷新间隔和计时器
-var spawn_interval = 2.0
+var spawn_interval = 3.0
 var spawn_timer = 0.0
 
 # 最大怪物数量

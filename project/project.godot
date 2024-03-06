@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/tags=PackedStringArray("MoYu")
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/init.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -24,11 +25,13 @@ config/windows_native_icon="res://icon_x16.ico"
 Global="*res://scripts/global.gd"
 GlobalSteam="res://scripts/steam.gd"
 Audio="*res://scripts/audio.gd"
+SceneTransition="*res://objects/scene_transition.tscn"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=3840
+window/size/viewport_height=2160
+window/stretch/mode="viewport"
 
 [editor]
 
@@ -117,4 +120,5 @@ run={
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 anti_aliasing/quality/screen_space_aa=1
