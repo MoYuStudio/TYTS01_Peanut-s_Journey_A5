@@ -1,5 +1,5 @@
 
-extends Node3D
+extends CharacterBody3D
 
 @onready var player = get_parent().get_parent().get_node("Player")
 
@@ -7,32 +7,32 @@ extends Node3D
 @onready var muzzle_a = $MuzzleA
 @onready var muzzle_b = $MuzzleB
 
+@onready var nav = $NavigationAgent3D
+
 signal died
 
 var health := 100
 var time := 0.0
-var target_position: Vector3
 var destroyed := false
 
-var move_speed := 2.0  # 敌人每秒移动的单位数
+var move_speed := 3.0  # 敌人每秒移动的单位数
+var move_accel = 30
 
-# 准备好后，保存初始位置
-
-func _ready():
-	target_position = position
-
-func _process(delta):
-	self.look_at(player.position + Vector3(0, 0.5, 0), Vector3.UP, true)  # 看向玩家
-	target_position.y += (cos(time * 5) * 1) * delta  # 正弦运动（上下）
+func _physics_process(delta):
+	self.look_at(player.position + Vector3(0, 0, 0), Vector3.UP, true)  # 看向玩家
+	# target_position.y += (cos(time * 5) * 1) * delta  # 正弦运动（上下）
 	
 	# 向玩家移动
-	var direction_to_player = (player.position - position).normalized()
-	target_position += direction_to_player * move_speed * delta
+	var direction = Vector3()
+	nav.target_position = player.position
 	
+	direction = nav.get_next_path_position() - global_position
+	direction = direction.normalized()
+	
+	velocity = velocity.lerp(direction * move_speed, move_accel * delta)
+	move_and_slide()
 
 	time += delta
-
-	position = target_position
 
 # 受到玩家的伤害
 
@@ -75,4 +75,4 @@ func _on_timer_timeout():
 
 			Audio.play("sounds/enemy_attack.ogg")
 
-			collider.damage(3)  # 对玩家造成伤害
+			collider.damage(1)  # 对玩家造成伤害

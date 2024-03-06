@@ -10,8 +10,8 @@ size = Vector3(0.6, 0.9, 0.6)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gly3v"]
 albedo_color = Color(0.462745, 0.462745, 0.462745, 1)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7kp1j"]
-height = 1.5
+[sub_resource type="BoxShape3D" id="BoxShape3D_of3qq"]
+size = Vector3(0.5, 1, 0.5)
 
 [node name="Enemy" type="CharacterBody3D"]
 script = ExtResource("1_jg24b")
@@ -33,10 +33,10 @@ mesh = ExtResource("2_o4q3k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("CapsuleShape3D_7kp1j")
+shape = SubResource("BoxShape3D_of3qq")
 
 [node name="RayCast" type="RayCast3D" parent="."]
-target_position = Vector3(0, 0, 20)
+target_position = Vector3(0, 0, 3)
 
 [node name="MuzzleA" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.5, 0.355, 0.43)
@@ -51,5 +51,9 @@ sprite_frames = ExtResource("3_iblw5")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
 autostart = true
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_max_distance = 0.01
+debug_enabled = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

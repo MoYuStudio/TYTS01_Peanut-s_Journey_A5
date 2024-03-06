@@ -23,7 +23,7 @@ func _on_stream_finished(stream):
 
 func play(sound_path):  # Path (or multiple, separated by commas)
 	var sounds = sound_path.split(",")
-	if len(queue)<= 9:
+	if len(queue)<= 3:
 		queue.append("res://" + sounds[randi() % sounds.size()].strip_edges())
 	else:
 		pass

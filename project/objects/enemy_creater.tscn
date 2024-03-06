@@ -10,11 +10,11 @@ extends Node3D
 var monster_scene = preload(\"res://objects/enemy.tscn\")
 
 # 刷新间隔和计时器
-var spawn_interval = 3.0
+var spawn_interval = 2.0
 var spawn_timer = 0.0
 
 # 最大怪物数量
-var max_monsters = 9
+var max_monsters = 64
 
 # 当前场景中的怪物数量
 var current_monsters = 0
@@ -73,3 +73,4 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ad72f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("SphereShape3D_74ald")
+disabled = true

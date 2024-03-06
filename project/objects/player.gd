@@ -1,3 +1,4 @@
+
 extends CharacterBody3D
 
 @export_subgroup("Properties") # 特性组

@@ -13,6 +13,7 @@ uv2_scale = Vector3(2, 2, 2)
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xybb2"]
+size = Vector3(1, 0.5, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsxy7"]
 albedo_texture = ExtResource("3_ib7t7")
