@@ -4,7 +4,7 @@ extends Node
 func _ready():
 	DisplayServer.window_set_title("Peanut's Journey")
 	
-	Engine.set_max_fps(60)
+	Engine.set_max_fps(144)
 	# DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	DisplayServer.window_set_size(Vector2(1280,720))
 	DisplayServer.window_set_position(Vector2(100,200))
@@ -14,7 +14,7 @@ func save_data(slot_name,data):
 	var json_str = JSON.stringify(data)
 	file.store_line(json_str)
 	
-func load_data(slot_name):
+func load_data(slot_name): 
 	var path = 'data/'+str(slot_name)+'.moyudata'
 	var data = {}
 	if not FileAccess.file_exists(path):

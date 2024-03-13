@@ -106,6 +106,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.3, 0.3)
 pivot_offset = Vector2(64, 64)
 
 [node name="HealthBar" type="TextureProgressBar" parent="HUD"]
@@ -114,7 +115,7 @@ offset_left = 53.0
 offset_top = 44.0
 offset_right = 117.0
 offset_bottom = 49.0
-scale = Vector2(32, 32)
+scale = Vector2(9, 9)
 value = 100.0
 texture_under = ExtResource("4_jwc8u")
 texture_over = ExtResource("5_6m18p")
@@ -129,8 +130,7 @@ libraries = {
 
 [node name="WeaponSprite" type="Sprite2D" parent="HUD"]
 texture_filter = 1
-position = Vector2(572, 1774)
-scale = Vector2(3, 3)
+position = Vector2(205, 574)
 texture = ExtResource("7_egx8i")
 
 [node name="Key" type="Sprite2D" parent="HUD/WeaponSprite"]
@@ -142,10 +142,11 @@ texture = ExtResource("8_l7xj1")
 [node name="Integral" type="Control" parent="HUD"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 2918.0
-offset_top = 57.0
-offset_right = 2918.0
-offset_bottom = 57.0
+offset_left = 981.0
+offset_top = 20.0
+offset_right = 981.0
+offset_bottom = 20.0
+scale = Vector2(0.32, 0.32)
 
 [node name="Mark" type="Label" parent="HUD/Integral"]
 texture_filter = 1
